@@ -1,88 +1,107 @@
 body {
-margin:0;
-font-family:Arial;
-background:#0f172a;
-color:white;
-overflow-x:hidden;
+margin: 0;
+font-family: 'Poppins', sans-serif;
+color: white;
+overflow-x: hidden;
+
+/* FINAL AI BACKGROUND */
+background: linear-gradient(-45deg, #1e3c72, #2a5298, #00c6ff, #6dd5ed);
+background-size: 400% 400%;
+animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
 }
 
 #particles-js {
-position:fixed;
-width:100%;
-height:100%;
-z-index:-1;
+position: fixed;
+width: 100%;
+height: 100%;
+z-index: -1;
 }
 
 header {
-text-align:center;
-padding:60px;
+text-align: center;
+padding: 60px;
 }
 
 nav {
-text-align:center;
-background:#020617;
-padding:10px;
+text-align: center;
+padding: 12px;
+background: rgba(0,0,0,0.3);
+backdrop-filter: blur(10px);
 }
 
 nav a {
-color:white;
-margin:10px;
-text-decoration:none;
+color: white;
+margin: 15px;
+text-decoration: none;
+transition: 0.3s;
+}
+
+nav a:hover {
+color: #00c6ff;
 }
 
 .section {
-margin:20px;
-padding:30px;
-background:rgba(255,255,255,0.05);
-border-radius:15px;
-transition:0.5s;
+margin: 30px;
+padding: 30px;
+background: rgba(255, 255, 255, 0.15);
+backdrop-filter: blur(18px);
+border-radius: 20px;
+box-shadow: 0 0 20px rgba(0,0,0,0.2);
+transition: 0.4s;
 }
 
 .section:hover {
-transform:scale(1.02);
-}
-
-.btn {
-display:inline-block;
-padding:10px 20px;
-background:cyan;
-color:black;
-margin-top:10px;
-border-radius:20px;
-text-decoration:none;
+transform: scale(1.02);
+box-shadow: 0 0 30px rgba(255,255,255,0.3);
 }
 
 .skill {
-margin:10px 0;
+margin: 10px 0;
 }
 
 .bar {
-background:#333;
-height:10px;
-border-radius:5px;
+background: #333;
+height: 10px;
+border-radius: 5px;
 }
 
 .bar div {
-background:cyan;
-height:100%;
-border-radius:5px;
+background: cyan;
+height: 100%;
+border-radius: 5px;
 }
 
 .card {
-background:#111;
-padding:20px;
-margin:10px;
-border-radius:10px;
-transition:0.3s;
+background: rgba(0,0,0,0.5);
+padding: 20px;
+margin: 10px;
+border-radius: 10px;
+transition: 0.3s;
 }
 
 .card:hover {
-transform:translateY(-10px);
-background:#1e293b;
+transform: translateY(-10px);
+}
+
+.btn {
+display: inline-block;
+padding: 12px 25px;
+border-radius: 30px;
+background: linear-gradient(45deg, cyan, blue);
+color: white;
+text-decoration: none;
+margin-top: 15px;
+box-shadow: 0 0 20px cyan;
 }
 
 footer {
-text-align:center;
-padding:20px;
-background:#020617;
+text-align: center;
+padding: 20px;
+background: rgba(0,0,0,0.5);
 }

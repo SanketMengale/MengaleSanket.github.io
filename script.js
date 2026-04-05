@@ -28,8 +28,18 @@ type();
 // Particles
 particlesJS("particles-js", {
 particles: {
-number: { value: 80 },
-color: { value: "#00ffff" },
-line_linked: { enable: true, color: "#00ffff" }
+number: { value: 90 },
+color: { value: "#ffffff" },
+opacity: { value: 0.4 },
+size: { value: 3 },
+line_linked: {
+enable: true,
+color: "#ffffff",
+opacity: 0.2
+},
+move: {
+enable: true,
+speed: 2
+}
 }
 });

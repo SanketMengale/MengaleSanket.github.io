@@ -1,12 +1,35 @@
-const sections = document.querySelectorAll('.section');
+// Typing Effect
+const text = ["Developer", "AI Enthusiast", "Problem Solver"];
+let i = 0, j = 0;
+let current = "";
+let isDeleting = false;
 
-window.addEventListener('scroll', () => {
-    sections.forEach(sec => {
-        const top = window.scrollY;
-        const offset = sec.offsetTop - 300;
+function type() {
+current = text[i];
+document.getElementById("typing").textContent = current.substring(0, j);
 
-        if (top > offset) {
-            sec.classList.add('show');
-        }
-    });
+if (!isDeleting && j < current.length) {
+j++;
+} else if (isDeleting && j > 0) {
+j--;
+}
+
+if (j == current.length) isDeleting = true;
+if (j == 0 && isDeleting) {
+isDeleting = false;
+i = (i + 1) % text.length;
+}
+
+setTimeout(type, 100);
+}
+
+type();
+
+// Particles
+particlesJS("particles-js", {
+particles: {
+number: { value: 80 },
+color: { value: "#00ffff" },
+line_linked: { enable: true, color: "#00ffff" }
+}
 });

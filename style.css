@@ -1,20 +1,18 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #3a3a6a);
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: white;
-    scroll-behavior: smooth;
 }
 
 header {
     text-align: center;
-    padding: 50px;
-    background: rgba(0,0,0,0.5);
+    padding: 40px;
 }
 
 nav {
     text-align: center;
-    background: #111;
+    background: black;
     padding: 10px;
 }
 
@@ -30,14 +28,14 @@ nav a:hover {
 }
 
 .section {
-    padding: 50px;
     margin: 20px;
-    border-radius: 15px;
+    padding: 30px;
     background: rgba(255,255,255,0.1);
+    border-radius: 15px;
     backdrop-filter: blur(10px);
-    transition: transform 0.5s, opacity 0.5s;
     opacity: 0;
     transform: translateY(50px);
+    transition: 0.6s;
 }
 
 .section.show {
